@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <title>Test</title>
+
+    <style>
+
+        h1 {
+            color: #333;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666666;
+        }
+
+        * {box-sizing: border-box;}
+
+        @font-face {
+            font-family: Montserrat-Thin;
+            src: url(Montserrat-Thin.ttf);
+        }
+        .hello{
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            padding-top: 35%;
+        }
+        .wellcome{
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+        }
+
+        body{
+            text-align: center;
+            padding: 100px;
+            font-family: Arial, sans-serif;
+        }
+        .preload{
+            width: 100%;
+            height: 100%;
+            background: rgb(255, 255, 255);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .loader-frame{
+            width: 250px;
+            height: 250px;
+            margin: auto;
+            margin-top: 10%;
+            position: relative;
+        }
+
+        .circle{
+            position: absolute;
+            height: 250px;
+            width: 250px;
+            background-color: white 0%;
+            border: 1px solid rgb(70, 70, 70);
+            border-radius: 50%;
+            display: block;
+        }
+
+        .loader1{
+            position: absolute;
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            border-top: 5px solid rgb(70, 70, 70);
+            border-bottom: 5px solid rgb(80, 80, 80);
+            animation: clockwisespin 5s linear 3;
+        }
+
+        @keyframes clockwisespin{
+            from{transform: rotate(0deg);}
+            to{transform: rotate(360deg);}
+        }
+
+
+        @keyframes fadeout{
+            from{opacity: 1;}
+            to{opacity: 0;}
+        }
+        @keyframes fadein{
+            from{opacity: 0;}
+            to{opacity: 1;}
+        }
+    </style>
+</head>
+<body onload="myFunction()">
+
+<div class="preload" id="preload">
+    <div class="logo">
+    </div>
+    <div class="loader-frame">
+        <div class="loader1" id="loader1">
+        </div>
+        <div class="circle"></div>
+        <h1 class="hello">Hello</h1>
+        <h5 class="wellcome">Wellcome to My Website</h5>
+    </div>
+</div>
+<h1>Selamat Datang</h1>
+<h4>Sufyan Dzaki_11220930000129</h4>
+<a href="/login" class="button">Sign In</a>
+<a href="/register" class="button">Sign Up</a>
+<script>
+    var myVar;
+
+    function myFunction(){
+        myVar = setTimeout(hiding, 3000);
+        myVar = setTimeout(showPage,4000);
+    }
+
+    function showPage(){
+        document.getElementById("preload").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+    }
+
+    function hiding(){
+        document.getElementById("preload").style.animation = "fadeout 1s ease";
+        document.getElementById("myDiv").style.animation = "fadein 1s ease";
+    }
+</script>
+</body>
+</html>

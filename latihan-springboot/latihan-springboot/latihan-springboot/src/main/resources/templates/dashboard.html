@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
+        :root {
+            --primary: #094b65;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+            background: #fff;
+            min-height: 100vh;
+        }
+
+        #header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        #header .logo {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 2em;
+            text-decoration: none;
+        }
+
+        #header ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #header ul li {
+            list-style: none;
+            margin-left: 20px;
+        }
+
+        #header ul li a {
+            text-decoration: none;
+            padding: 6px 15px;
+            color: var(--primary);
+            border-radius: 20px;
+        }
+
+        #header ul li a:hover,
+        #header ul li a.active {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to top, var(--primary), transparent);
+            z-index: 10;
+        }
+
+        section img {
+            position: absolute;
+            top: 0px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+
+        section #text {
+            position: absolute;
+            color: var(--primary);
+            font-size: 10vw;
+            text-align: center;
+            line-height: .55em;
+            font-family: 'Rancho', cursive;
+            transform: translatey(-50%);
+        }
+
+        section #text span {
+            font-size: .20em;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+
+        #btn {
+            text-decoration: none;
+            display: inline-block;
+            padding: 8px 30px;
+            background: #fff;
+            color: var(--primary);
+            font-size: 1.2em;
+            font-weight: 500;
+            letter-spacing: 2px;
+            border-radius: 40px;
+            transform: translatey(100px);
+        }
+
+        .sec {
+            position: relative;
+            padding: 100px;
+            background: var(--primary);
+        }
+
+        .sec h2 {
+            font-size: 3.5em;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .sec p {
+            font-size: 1em;
+            color: #fff;
+        }
+
+        footer {
+            position: relative;
+            padding: 0px 100px;
+            background: var(--primary);
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<header id="header">
+    <a href="#" class="logo">Civutat Forest</a>
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="https://id.wikipedia.org/wiki/Situ_Gintung">About</a></li>
+        <li><a href="https://goo.gl/maps/WbzBeXePtZPJ3pDi8">Destination</a></li>
+        <li><a href="https://wa.me/6289604912075">Contact</a></li>
+    </ul>
+</header>
+
+<Section>
+    <h2 id="text"><span>It's time for a new</span><br>Rempoa</h2>
+
+    <img src="https://user-images.githubusercontent.com/65358991/170092504-132fa547-5ced-40e5-ab64-ded61518fac2.png" id="bird1">
+    <img src="https://user-images.githubusercontent.com/65358991/170092542-9747edcc-fb51-4e21-aaf5-a61119393618.png" id="bird2">
+    <img src="https://user-images.githubusercontent.com/65358991/170092559-883fe071-eb4f-4610-8c8b-a037d061c617.png" id="forest">
+
+    <a href="#" id="btn">Explore</a>
+
+    <img src="https://user-images.githubusercontent.com/65358991/170092605-eada6510-d556-45cc-b7fa-9e4d1d258d26.png" id="rocks">
+    <img src="https://user-images.githubusercontent.com/65358991/170092616-5a70c4af-2eed-496f-bde9-b5fcc7142a31.png" id="water">
+</Section>
+
+<div class="sec">
+    <h2>Civutat</h2>
+    <p> Situ Gintung adalah danau kecil buatan yang terletak di Kecamatan Ciputat Timur, Kota Tangerang Selatan, Provinsi Banten. Lokasi danau ini berada di sebelah barat daya kota Jakarta. Danau seluas 21,4 ha (2008) ini telah berubah fungsi, dimanfaatkan sebagai tempat wisata taman.
+        <br><br>
+        Awal pembentukan situ (danau) ini adalah sebagai waduk yang berfungsi sebagai tempat penampungan air hujan dan untuk perairan ladang pertanian di sekitarnya, dibuat antara tahun 1932-1933 dengan luas awal 31 ha. Kapasitas penyimpanannya mencapai 2,1 juta meter kubik. Situ ini adalah bagian dari Daerah Aliran Ci Sadane merupakan salah satu sungai utama Provinsi Banten dan Jawa Barat sumber berasal dari Gunung Salak dan Gunung Pangrango di (Kabupaten Bogor, sebelah selatan Kabupaten Tangerang) yang mengalir ke Laut Jawa panjang sungai ini sekitar 80 km dan bendungan aliran Kali Pesanggrahan. Di tengah-tengah situ terdapat sebuah pulau kecil yang menyambung sampai ke tepi daratan seluas kurang lebih 1,5 ha yang bernama Pulau Situ Gintung beserta hutan tanaman yang berada sekitarnya.</p>
+</div>
+
+<div class="sec">
+    <h2>Bencana Tanggul Bobol 2009</h2>
+    <p>Pada tanggal 27 Maret 2009 dini hari, wilayah Situ Gintung mengalami hujan deras yang menyebabkan pihak keamanan memberikan peringatan bahaya banjir sekitar pukul 02.00. Namun, tidak ada tindakan lanjut pengamanan,[butuh rujukan] hingga terjadi kebobolan tanggul selebar 30 m dengan ketinggian 6 m pada sekitar pukul 04.00 WIB dan sekitar 2,1 juta meter kubik air melanda pemukiman yang terletak di bawah tanggul. Korban meninggal sedikitnya 99 orang dan diperkirakan catatan ini masih akan berubah. Presiden Susilo Bambang Yudhoyono dan Jusuf Kalla mengunjungi tempat bencana pada siang hari dan berjanji akan secepat mungkin melakukan renovasi. Bencana ini juga membuat Gubernur DKI Jakarta, Fauzi Bowo, memerintahkan pemeriksaan ulang semua bangunan pengatur air di wilayah DKI Jakarta.</p>
+</div>
+
+<script>
+    let text = document.getElementById('text');
+    let bird1 = document.getElementById('bird1');
+    let bird2 = document.getElementById('bird2');
+    let btn = document.getElementById('btn');
+    let rocks = document.getElementById('rocks');
+    let forest = document.getElementById('forest');
+    let water = document.getElementById('water');
+    let header = document.getElementById('header');
+
+    window.addEventListener('scroll', function() {
+        let value = window.scrollY;
+
+        text.style.top = 50 + value * -.1 + '%';
+        bird2.style.top = value * -1.5 + 'px';
+        bird2.style.left = value * 2 + 'px';
+        bird1.style.top = value * -1.5 + 'px';
+        bird1.style.left = value * -5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        rocks.style.top = value * -.12 + 'px';
+        forest.style.top = value * .25 + 'px';
+        header.style.top = value * .5 + 'px';
+    })
+</script>
+
+</body>
+</html>
